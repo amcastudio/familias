@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navidad en casa · Sesiones familiares a domicilio · AMCA Studio</title>
+<meta name="description" content="Navidad en casa: sesiones fotográficas familiares a domicilio en Cali, con tu propia decoración navideña. AMCA Studio.">
+<meta property="og:title" content="Navidad en casa · AMCA Studio">
+<meta property="og:description" content="Esta Navidad, no vayas a buscar el escenario perfecto. Tu hogar ya lo tiene. Sesiones familiares a domicilio en Cali.">
+<meta property="og:image" content="fotos/sesion-1/01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║  AMCA STUDIO · FAMILIAS Y RETRATOS                                ║
+║                                                                   ║
+║  CÓMO EDITAR: todo el contenido (textos, precios, adicionales,    ║
+║  condiciones, preguntas, fotos y WhatsApp) está en el bloque      ║
+║  "CONTENIDO EDITABLE" más abajo. Cambia solo lo que está entre    ║
+║  comillas "...". Para agregar un elemento a una lista, copia una  ║
+║  línea completa { ... }, pégala debajo y cambia el texto.         ║
+║                                                                   ║
+║  FOTOS: súbelas a la carpeta "fotos/" con el mismo nombre que     ║
+║  aparece en el contenido. Si una aún no existe, se ve un          ║
+║  recuadro arena en su lugar, así que puedes publicar ya.          ║
+║  Tamaño ideal: 1600 px de ancho, vertical (4:5), en .jpg.         ║
+║                                                                   ║
+║  Colores y tipografías siguen la línea gráfica de AMCA Studio.    ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+:root{
+  --lino:#F6F4F0; --blanco:#FFFFFF; --tinta:#1F1F1D; --tinta-suave:#6B6862;
+  --pino:#3E5747; --sobre-pino:#F6F4F0; --salvia:#DCE3DA; --arena:#D8CEC4;
+  --linea:#D9D3CB; --cereza:#8E2F2C;
+  --display:"Gilda Display","Cormorant Garamond",Georgia,serif;
+  --sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px; --s6:120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;background:var(--lino);color:var(--tinta);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+strong{font-weight:600}
+.contenedor{width:min(1080px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--pino);line-height:1.05}
+.mayus{text-transform:uppercase;letter-spacing:.02em}
+
+/* Pastillas y botones */
+.pastilla{display:inline-flex;align-items:center;justify-content:center;padding:6px 24px;border:1.5px solid var(--tinta);border-radius:999px;font-weight:600;font-size:16px;line-height:24px;color:var(--pino);background:transparent;text-align:center}
+.pastilla.precio{font-size:24px;line-height:30px;padding:12px 44px}
+.boton{display:inline-flex;align-items:center;justify-content:center;padding:14px 32px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.02em;text-decoration:none;border:1.5px solid var(--pino);background:var(--pino);color:var(--sobre-pino);transition:background .2s,color .2s}
+.boton:hover{background:#334a3c}
+.boton.secundario{background:transparent;color:var(--pino)}
+.boton.secundario:hover{background:var(--pino);color:var(--sobre-pino)}
+.boton:focus-visible,.pastilla:focus-visible,summary:focus-visible,.item:focus-visible{outline:2px solid var(--pino);outline-offset:3px}
+
+/* Navegación */
+nav{position:sticky;top:0;z-index:40;background:rgba(246,244,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.con-linea{border-color:var(--linea)}
+nav .contenedor{display:flex;align-items:center;justify-content:space-between;height:72px;gap:var(--s2)}
+.firma{text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.firma b{font-family:var(--display);font-weight:400;font-size:24px;color:var(--pino)}
+.firma span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave)}
+.menu{display:flex;gap:26px;list-style:none;font-size:14px}
+.menu a{text-decoration:none}
+.menu a:hover{color:var(--pino)}
+@media(max-width:860px){.menu{display:none}.firma span{display:none}}
+
+/* Foto con recuadro de respaldo */
+.foto{position:relative;background:var(--arena);aspect-ratio:4/5;overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto.vacia img{display:none}
+.foto.vacia::after{content:attr(data-alt);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:var(--s2);font-family:var(--display);font-size:15px;color:var(--tinta-suave)}
+
+/* Portada estilo flyer */
+.portada{padding:var(--s5) 0 var(--s6)}
+.portada .rejilla{display:grid;grid-template-columns:1fr 1fr auto;gap:var(--s2);align-items:start;margin-top:var(--s4)}
+.vertical{font-family:var(--display);color:var(--arena);font-size:clamp(110px,15vw,200px);line-height:.8;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;padding-left:var(--s2);text-transform:uppercase}
+.portada h1{font-size:clamp(46px,8.5vw,96px);margin-top:var(--s5)}
+.portada .bajada{font-family:var(--display);font-size:clamp(22px,2.6vw,28px);color:var(--tinta);margin-top:var(--s1)}
+.portada .lead{max-width:38rem;margin-top:var(--s3);font-size:19px}
+.portada .lema{font-style:italic;color:var(--tinta-suave);margin-top:var(--s1)}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s4)}
+@media(max-width:700px){.portada .rejilla{grid-template-columns:1fr 1fr}.vertical{display:none}}
+
+/* Secciones */
+section{padding:var(--s6) 0}
+.cabeza{margin-bottom:var(--s5);max-width:42rem}
+.cabeza h2{font-size:clamp(34px,5vw,52px)}
+.cabeza p{margin-top:var(--s2);color:var(--tinta-suave)}
+.fina{border-top:1px solid var(--linea)}
+.suave{background:var(--salvia)}
+
+/* Dos columnas texto + foto */
+.dos{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s5);align-items:center}
+.dos .texto p + p{margin-top:var(--s2)}
+.dos .texto h2{font-size:clamp(34px,5vw,52px);margin-bottom:var(--s3)}
+@media(max-width:760px){.dos{grid-template-columns:1fr;gap:var(--s4)}}
+
+/* Propuesta de valor */
+.valores{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s4) var(--s3)}
+.valor{border-top:1.5px solid var(--pino);padding-top:var(--s2)}
+.valor h3{font-size:24px;margin-bottom:var(--s1)}
+.valor p{font-size:16px;color:var(--tinta-suave)}
+
+/* Inversión */
+.inversion{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);align-items:start}
+.inversion h3{font-size:clamp(30px,4vw,42px);margin-bottom:var(--s3)}
+.inversion ul{margin:var(--s3) 0 var(--s3) 20px}
+.inversion li{padding:2px 0}
+.reserva{font-size:15px;color:var(--tinta-suave);margin-bottom:var(--s4)}
+.reserva strong{color:var(--pino)}
+@media(max-width:760px){.inversion{grid-template-columns:1fr;gap:var(--s4)}}
+.adicionales{margin-top:var(--s6)}
+.adicionales h3{font-size:30px;margin-bottom:var(--s3)}
+.tabla{width:100%;border-collapse:collapse}
+.tabla td{padding:var(--s2) 0;border-top:1px solid var(--linea);vertical-align:top}
+.tabla tr:last-child td{border-bottom:1px solid var(--linea)}
+.tabla td:last-child{text-align:right;font-weight:600;color:var(--pino);white-space:nowrap;padding-left:var(--s3)}
+.tabla small{display:block;color:var(--tinta-suave);font-size:14px}
+.nota{margin-top:var(--s3);font-size:15px;color:var(--tinta-suave)}
+
+/* Pasos */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5) var(--s4)}
+.paso b{display:block;font-family:var(--display);font-weight:400;font-size:72px;line-height:1;color:var(--arena)}
+.paso h3{font-size:24px;margin:var(--s1) 0}
+.paso p{color:var(--tinta-suave);font-size:16px}
+.paso p + p{margin-top:var(--s1)}
+@media(max-width:860px){.pasos{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pasos{grid-template-columns:1fr}}
+
+/* Entrega */
+.entrega{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s2);margin-top:var(--s5)}
+.entrega div{border:1.5px solid var(--tinta);border-radius:999px;padding:12px 24px;text-align:center;font-weight:400;font-size:15px}
+.entrega + .nota{text-align:center}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2)}
+.galeria .item{cursor:zoom-in;border:0;padding:0;background:none;text-align:left;font:inherit;color:inherit}
+.galeria .pie{font-size:13px;color:var(--tinta-suave);margin-top:6px}
+@media(max-width:700px){.galeria{grid-template-columns:1fr 1fr}}
+
+/* Acordeones (condiciones y preguntas) */
+.acordeon details{border-top:1px solid var(--linea);padding:var(--s3) 0}
+.acordeon details:last-child{border-bottom:1px solid var(--linea)}
+.acordeon summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:var(--s2);font-family:var(--display);font-size:22px;color:var(--pino)}
+.acordeon summary::-webkit-details-marker{display:none}
+.acordeon summary::after{content:"+";font-family:var(--sans);font-weight:300}
+.acordeon details[open] summary::after{content:"–"}
+.acordeon p,.acordeon ul{margin-top:var(--s2);color:var(--tinta-suave);max-width:46rem}
+.acordeon ul{padding-left:20px}
+.acordeon li + li{margin-top:6px}
+
+/* Contacto / cierre */
+.contacto{background:var(--salvia);text-align:center}
+.contacto h2{font-size:clamp(34px,5.5vw,60px);max-width:46rem;margin:var(--s3) auto var(--s3)}
+.contacto p{max-width:34rem;margin:0 auto var(--s2)}
+.contacto .boton{margin-top:var(--s3)}
+.contacto .pagos{margin-top:var(--s4);font-size:13px;color:var(--tinta-suave)}
+footer{padding:var(--s4) 0;font-size:13px;color:var(--tinta-suave)}
+footer .contenedor{display:flex;flex-wrap:wrap;gap:var(--s2);justify-content:space-between}
+footer a{margin-left:var(--s3);text-decoration:none}
+footer a:hover{color:var(--pino)}
+
+/* WhatsApp flotante */
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--pino);display:grid;place-items:center;box-shadow:0 8px 20px -8px rgba(0,0,0,.35)}
+.wa svg{width:28px;height:28px;fill:var(--sobre-pino)}
+
+/* Volver arriba */
+.arriba{position:fixed;right:22px;bottom:88px;z-index:60;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--pino);background:var(--lino);color:var(--pino);display:grid;place-items:center;text-decoration:none;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .3s,transform .3s,background .2s,color .2s}
+.arriba.visible{opacity:1;pointer-events:auto;transform:none}
+.arriba:hover{background:var(--pino);color:var(--sobre-pino)}
+.arriba:focus-visible{outline:2px solid var(--pino);outline-offset:3px}
+.arriba svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* Fotos de portada que abren una sesión */
+.sesion{position:relative;display:block;border:0;padding:0;background:none;cursor:pointer;font:inherit;color:inherit;text-align:left}
+.sesion .ver{position:absolute;left:12px;bottom:12px;padding:6px 16px;border-radius:999px;background:rgba(246,244,240,.92);color:var(--pino);font-size:13px;font-weight:600;transition:background .2s,color .2s}
+.sesion:hover .ver{background:var(--pino);color:var(--sobre-pino)}
+.sesion:focus-visible{outline:2px solid var(--pino);outline-offset:3px}
+
+/* Visor de fotos */
+.visor{position:fixed;inset:0;background:var(--lino);z-index:100;display:none;grid-template-rows:auto 1fr auto auto;gap:12px;padding:16px 16px 20px}
+.visor.abierto{display:grid}
+.visor .barra{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.visor .titulo{font-family:var(--display);font-size:20px;color:var(--pino)}
+.visor .contador{font-size:14px;color:var(--tinta-suave);margin-left:10px;font-family:var(--sans)}
+.visor .escena{position:relative;min-height:0;overflow:hidden}
+.visor .escena img{position:absolute;inset:0;margin:auto;max-width:100%;max-height:100%;width:auto;height:auto}
+.visor button{background:none;border:0;color:var(--pino);font-size:40px;line-height:1;cursor:pointer;padding:8px 14px;font-family:var(--sans);font-weight:300}
+.visor .ant,.visor .sig{position:absolute;z-index:1;top:50%;transform:translateY(-50%);background:rgba(246,244,240,.85);border-radius:50%;width:52px;height:52px;padding:0}
+.visor .ant{left:0}.visor .sig{right:0}
+.visor .pie{text-align:center;color:var(--tinta-suave);font-size:14px;min-height:20px}
+.visor .minis{display:flex;gap:8px;justify-content:center;overflow-x:auto;padding:2px}
+.visor .minis button{flex:0 0 auto;width:52px;height:64px;padding:0;border:1.5px solid transparent;opacity:.55;transition:opacity .2s;background:var(--arena)}
+.visor .minis button.actual{border-color:var(--pino);opacity:1}
+.visor .minis img{width:100%;height:100%;object-fit:cover}
+.visor:not(.varias) .ant,.visor:not(.varias) .sig,.visor:not(.varias) .minis{display:none}
+@media(max-width:600px){.visor .minis{justify-content:flex-start}.visor .ant,.visor .sig{width:44px;height:44px}}
+
+.aparece{opacity:0;transform:translateY(18px);transition:opacity .9s,transform .9s}
+.aparece.visto{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.aparece{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<script>
+/* ════════════════════════════════════════════════════════════════
+   CONTENIDO EDITABLE — cambia aquí textos, precios y fotos
+   ════════════════════════════════════════════════════════════════ */
+const CONTENIDO = {
+  whatsapp: "573157483531",     // tu número con 57 adelante, sin espacios ni +
+  mensajeWhatsApp: "Hola AMCA Studio, quiero consultar disponibilidad para una sesión Navidad en casa. Mi barrio en Cali es: ",
+  instagram: "https://www.instagram.com/amcastudio_col",
+  tiktok: "https://www.tiktok.com/@amcastudio_col",
+  behance: "https://www.behance.net/amcaphotography",
+  sitioMarcas: "",              // cuando exista el sitio de marcas, pon aquí su dirección
+  ciudad: "Cali",
+  pagos: "Pagos por Nequi · Llave · Bancolombia",
+
+  navidad: {
+    activa: true,               // en enero cámbialo a false y la página queda como retratos todo el año
+    etiqueta: "sesiones fotográficas familiares a domicilio",
+    palabraVertical: "Dic",
+    titulo: "Navidad en casa",
+    bajada: "Sesiones fotográficas familiares a domicilio en Cali",
+    gancho: "Esta Navidad, no vayas a buscar el escenario perfecto. <strong>Tu hogar ya lo tiene.</strong>",
+    lema: "Tu Navidad, tu hogar, tus recuerdos.",
+    // Sesiones de la portada: cada foto abre una mini galería de esa sesión.
+    // Sube las fotos a su carpeta con nombres 01.jpg, 02.jpg ... 07.jpg
+    // (la 01.jpg es la que se ve en la portada).
+    sesionesPortada: [
+      { nombre:"Sesión navideña 1", carpeta:"fotos/sesion-1", cantidad:7 },
+      { nombre:"Sesión navideña 2", carpeta:"fotos/sesion-2", cantidad:7 }
+    ],
+
+    concepto: {
+      titulo: "El concepto",
+      foto: "fotos/sesion-1/03.jpg",
+      parrafos: [
+        "Navidad en casa es una propuesta de fotografía familiar que lleva la sesión hasta tu hogar, utilizando tus propios espacios y tu decoración navideña como escenario.",
+        "La intención es crear recuerdos auténticos y personalizados, en un ambiente cómodo y familiar, sin desplazarte a un estudio ni adaptarte a escenarios navideños genéricos.",
+        "Cada hogar tiene su propia esencia y cada familia vive la Navidad de una manera diferente. La sesión busca conservar esos detalles en fotografías profesionales."
+      ]
+    },
+
+    valores: [
+      { t:"Comodidad", d:"AMCA Studio se desplaza hasta tu casa." },
+      { t:"Personalización", d:"Usamos los espacios y la decoración navideña de tu hogar." },
+      { t:"Acompañamiento", d:"Dirección durante la sesión para lograr fotos naturales." },
+      { t:"Cercanía", d:"Una experiencia familiar, sin afanes ni desplazamientos." },
+      { t:"Recuerdos únicos", d:"Imágenes que reflejan la identidad y los momentos de tu familia." }
+    ],
+
+    experiencia: {
+      titulo: "La experiencia",
+      foto: "fotos/sesion-2/02.jpg",
+      parrafos: [
+        "La sesión se realiza en tu hogar, aprovechando los espacios con decoración navideña y otros rincones que puedan aportar a las fotografías.",
+        "No necesitas una decoración grande o elaborada: trabajamos con lo que tienes en casa y te orientamos para aprovecharlo de la mejor manera.",
+        "Hacemos fotografías familiares, individuales y diferentes combinaciones entre los integrantes, según el tiempo y las características del grupo. La sesión dura hasta 60 minutos."
+      ]
+    },
+
+    precio: "$450.000",
+    moneda: "COP",
+    fotoPaquete: "fotos/sesion-1/05.jpg",
+    incluye: [
+      "Sesión fotográfica familiar a domicilio en Cali",
+      "Duración de hasta 60 minutos",
+      "Hasta 4 integrantes de la familia (las mascotas cuentan)",
+      "Dirección y acompañamiento fotográfico",
+      "Uso de los espacios y la decoración navideña de tu hogar",
+      "Galería digital privada para selección",
+      "10 fotografías finales editadas en alta resolución"
+    ],
+    reserva: "Reserva tu fecha con un anticipo del 50%: <strong>$225.000 COP</strong>. El saldo se cancela antes de la entrega final de las fotografías.",
+
+    adicionales: [
+      { c:"Integrante adicional", v:"$20.000" },
+      { c:"Fotografía adicional", v:"$15.000" },
+      { c:"Paquete de 5 fotografías adicionales", v:"$50.000" },
+      { c:"Galería completa", d:"Hasta 40 fotografías en total (10 incluidas + hasta 30 adicionales)", v:"$250.000" }
+    ],
+    notaGrupos: "Para grupos más grandes se realiza una cotización personalizada.",
+
+    pasos: [
+      { t:"Consulta de disponibilidad", d:["Escríbenos por WhatsApp, consulta las fechas disponibles y comparte la dirección de la sesión. La reserva está sujeta a disponibilidad y confirmación de cobertura."] },
+      { t:"Confirmación de la reserva", d:["La fecha y el horario quedan reservados con el pago del anticipo del 50%."] },
+      { t:"Preparación", d:["Preparas los espacios y la decoración que quieres usar. Es importante que todos estén listos al iniciar la sesión."] },
+      { t:"Sesión fotográfica", d:["AMCA Studio realiza la sesión en el domicilio acordado, con una duración máxima de 60 minutos."] },
+      { t:"Galería de selección", d:["Hasta 3 días hábiles después de la sesión recibes una galería digital privada para elegir tus favoritas. Tienes 7 días calendario para hacer tu selección.","Esta galería es solo de visualización; no son los archivos finales editados."] },
+      { t:"Edición y entrega final", d:["Con tu selección y el pago del saldo (y adicionales, si aplica), editamos y entregamos en un plazo de hasta 5 días hábiles."] }
+    ],
+
+    entrega: ["Fotografías digitales en JPG","Alta resolución","Enlace privado de descarga","Disponible durante 30 días"],
+    notaEntrega: "No se entregan archivos RAW ni fotografías impresas. Te recomendamos descargar y guardar tus fotos dentro del plazo del enlace.",
+
+    condiciones: [
+      { t:"Reserva y anticipos", items:["La fecha y el horario quedan reservados una vez recibido el anticipo del 50%.","El saldo restante debe estar cancelado antes de la entrega final de las fotografías."] },
+      { t:"Cancelaciones y cambios de fecha", items:["Si cancelas, el anticipo no es reembolsable, ya que corresponde a la reserva del espacio en la agenda.","Se permite un único cambio de fecha, sujeto a la disponibilidad de AMCA Studio.","Si no puedes realizar la sesión, puedes transferir tu espacio a otra familia, previa verificación de la nueva dirección y aceptación de las condiciones del servicio."] },
+      { t:"Puntualidad", items:["Se contempla un tiempo de espera máximo de 10 minutos.","El tiempo de espera no extiende la sesión: esta finaliza en el horario acordado."] },
+      { t:"Integrantes y mascotas", items:["El paquete incluye hasta 4 integrantes.","Las mascotas cuentan como parte del número de integrantes.","Cada integrante adicional tiene el valor indicado en las opciones adicionales."] },
+      { t:"Grupos grandes", items:["Las sesiones para grupos más grandes requieren una cotización personalizada."] }
+    ],
+
+    preguntas: [
+      { p:"¿Necesito tener una decoración navideña grande?", r:"No. Podemos aprovechar los elementos que ya tienes en casa y los espacios que mejor representen la Navidad de tu familia." },
+      { p:"¿Tenemos que saber posar para las fotografías?", r:"No. Durante la sesión recibirán orientación para ubicarse, interactuar y lograr fotografías naturales." },
+      { p:"¿Pueden participar nuestras mascotas?", r:"¡Claro! Las mascotas son bienvenidas y cuentan dentro del número de integrantes incluidos en el paquete." },
+      { p:"¿Cuánto tiempo dura la sesión?", r:"Hasta 60 minutos. Por eso es importante que todos estén listos al momento de iniciar." },
+      { p:"¿Cuándo recibimos las fotografías?", r:"La galería privada de selección se comparte en un plazo de hasta 3 días hábiles después de la sesión. Una vez recibida la selección y confirmado el pago del saldo, la entrega final se realiza en un plazo de hasta 5 días hábiles." },
+      { p:"¿Podemos comprar más fotografías?", r:"Sí. Puedes adquirir fotografías individuales, un paquete de 5 adicionales o la galería completa, que incluye hasta 40 fotografías en total." },
+      { p:"¿Qué pasa si necesitamos cambiar la fecha?", r:"Se permite un cambio de fecha, sujeto a la disponibilidad de AMCA Studio." },
+      { p:"¿Qué pasa si no podemos asistir?", r:"El anticipo no es reembolsable. Sin embargo, puedes transferir el espacio reservado a otra familia, previa verificación de la dirección y aceptación de las condiciones del servicio." }
+    ],
+
+    cierre: {
+      titulo: "Tu hogar ya tiene el escenario. Nosotros llevamos la fotografía.",
+      texto: "Esta Navidad, conserva esos momentos que hacen especial a tu familia. Reserva tu sesión fotográfica a domicilio con AMCA Studio.",
+      boton: "Agenda por WhatsApp"
+    }
+  },
+
+  retratos: {
+    titulo: "Familias y retratos",
+    texto: "Fotos tranquilas y naturales, en tu casa o en un lugar que signifique algo para ustedes."
+  },
+
+  galeria: [
+    { foto:"fotos/sesion-1/02.jpg", pie:"Momentos en casa" },
+    { foto:"fotos/sesion-2/03.jpg", pie:"Primera Navidad" },
+    { foto:"fotos/sesion-1/04.jpg", pie:"Retrato" },
+    { foto:"fotos/sesion-2/06.jpg", pie:"Mamá e hija" },
+    { foto:"fotos/sesion-1/06.jpg", pie:"Toda la familia" },
+    { foto:"fotos/sesion-2/05.jpg", pie:"Explorando" }
+  ]
+};
+/* ═══════════════ FIN DEL CONTENIDO EDITABLE ═══════════════ */
+</script>
+
+<nav id="nav">
+  <div class="contenedor">
+    <a href="#inicio" class="firma"><b>AMCA Studio</b><span>Familias y retratos</span></a>
+    <ul class="menu" id="menu"></ul>
+  </div>
+</nav>
+
+<main id="app"></main>
+
+<a class="wa" id="waFlotante" aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5.1 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<a class="arriba" id="arriba" href="#inicio" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Galería de la sesión">
+  <div class="barra"><div class="titulo"><span class="nom"></span><span class="contador"></span></div><button class="cerrar" aria-label="Cerrar">×</button></div>
+  <div class="escena"><img alt=""><button class="ant" aria-label="Foto anterior">‹</button><button class="sig" aria-label="Foto siguiente">›</button></div>
+  <div class="pie"></div>
+  <div class="minis"></div>
+</div>
+
+<script>
+const C = CONTENIDO, N = C.navidad;
+const wa = (msg) => `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(msg || C.mensajeWhatsApp)}`;
+const foto = (src, alt) => `<div class="foto" data-alt="${alt}"><img src="${src}" alt="${alt}" loading="lazy" onerror="this.parentNode.classList.add('vacia')"></div>`;
+const fotosDe = (s) => Array.from({length:s.cantidad},(_,i)=>({foto:`${s.carpeta}/${String(i+1).padStart(2,"0")}.jpg`, pie:s.nombre}));
+const parrafos = (ps) => ps.map(p=>`<p>${p}</p>`).join("");
+const menu = [];
+let html = "";
+
+if (N.activa) {
+  menu.push(["#experiencia","La experiencia"],["#inversion","Inversión"],["#proceso","Proceso"]);
+  html += `
+  <header class="portada" id="inicio">
+    <div class="contenedor">
+      <span class="pastilla">${N.etiqueta}</span>
+      <div class="rejilla">
+        ${N.sesionesPortada.map((s,i)=>`<button class="sesion" data-s="${i}" aria-label="Ver la sesión ${s.nombre}, ${s.cantidad} fotos">${foto(fotosDe(s)[0].foto,s.nombre)}<span class="ver">Ver sesión · ${s.cantidad} fotos</span></button>`).join("")}
+        <div class="vertical" aria-hidden="true">${N.palabraVertical}</div>
+      </div>
+      <h1 class="mayus">${N.titulo}</h1>
+      <p class="bajada">${N.bajada}</p>
+      <p class="lead">${N.gancho}</p>
+      <p class="lema">${N.lema}</p>
+      <div class="acciones">
+        <a class="boton" href="${wa()}" target="_blank" rel="noopener">Consultar disponibilidad</a>
+        <a class="boton secundario" href="#inversion">Ver inversión</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="fina">
+    <div class="contenedor dos">
+      <div class="texto aparece"><h2 class="mayus">${N.concepto.titulo}</h2>${parrafos(N.concepto.parrafos)}</div>
+      <div class="aparece">${foto(N.concepto.foto,"Familia en su hogar")}</div>
+    </div>
+  </section>
+
+  <section class="suave">
+    <div class="contenedor">
+      <div class="cabeza aparece"><h2 class="mayus">Una sesión diseñada alrededor de tu familia</h2></div>
+      <div class="valores">${N.valores.map(v=>`<div class="valor aparece"><h3>${v.t}</h3><p>${v.d}</p></div>`).join("")}</div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="contenedor dos">
+      <div class="aparece">${foto(N.experiencia.foto,"Sesión en casa")}</div>
+      <div class="texto aparece"><h2 class="mayus">${N.experiencia.titulo}</h2>${parrafos(N.experiencia.parrafos)}</div>
+    </div>
+  </section>
+
+  <section id="inversion" class="fina">
+    <div class="contenedor">
+      <div class="cabeza aparece"><h2 class="mayus">Inversión</h2></div>
+      <div class="inversion">
+        <div class="aparece">
+          <h3>Sesión Navidad en casa</h3>
+          <span class="pastilla precio">${N.precio} ${N.moneda}</span>
+          <ul>${N.incluye.map(x=>`<li>${x}</li>`).join("")}</ul>
+          <p class="reserva">${N.reserva}</p>
+          <a class="boton" href="${wa()}" target="_blank" rel="noopener">Reservar mi fecha</a>
+        </div>
+        <div class="aparece">${foto(N.fotoPaquete,"Sesión Navidad en casa")}</div>
+      </div>
+      <div class="adicionales aparece">
+        <h3>Opciones adicionales</h3>
+        <table class="tabla"><tbody>
+          ${N.adicionales.map(a=>`<tr><td>${a.c}${a.d?`<small>${a.d}</small>`:""}</td><td>${a.v}</td></tr>`).join("")}
+        </tbody></table>
+        <p class="nota">${N.notaGrupos}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" class="fina">
+    <div class="contenedor">
+      <div class="cabeza aparece"><h2 class="mayus">Reserva y entrega</h2><p>Así funciona, paso a paso.</p></div>
+      <div class="pasos">${N.pasos.map((s,i)=>`<div class="paso aparece"><b>0${i+1}</b><h3>${s.t}</h3>${parrafos(s.d)}</div>`).join("")}</div>
+      <div class="entrega aparece">${N.entrega.map(e=>`<div>${e}</div>`).join("")}</div>
+      <p class="nota aparece">${N.notaEntrega}</p>
+    </div>
+  </section>`;
+} else {
+  html += `
+  <header class="portada" id="inicio">
+    <div class="contenedor">
+      <span class="pastilla">fotografía · ${C.ciudad}</span>
+      <h1 class="mayus">${C.retratos.titulo}</h1>
+      <p class="lead">${C.retratos.texto}</p>
+      <div class="acciones"><a class="boton" href="${wa("Hola AMCA Studio, quiero cotizar una sesión de fotos")}" target="_blank" rel="noopener">Cotizar mi sesión</a></div>
+    </div>
+  </header>`;
+}
+
+menu.push(["#galeria","Galería"]);
+html += `
+<section id="galeria" class="fina">
+  <div class="contenedor">
+    <div class="cabeza aparece"><h2 class="mayus">${C.retratos.titulo}</h2><p>${C.retratos.texto}</p></div>
+    <div class="galeria">${C.galeria.map((g,i)=>`<button class="item aparece" data-i="${i}" aria-label="Ver ${g.pie}">${foto(g.foto,g.pie)}<div class="pie">${g.pie}</div></button>`).join("")}</div>
+  </div>
+</section>`;
+
+if (N.activa) {
+  menu.push(["#preguntas","Preguntas"]);
+  html += `
+  <section id="preguntas" class="fina">
+    <div class="contenedor">
+      <div class="cabeza aparece"><h2 class="mayus">Preguntas frecuentes</h2></div>
+      <div class="acordeon">${N.preguntas.map(q=>`<details><summary>${q.p}</summary><p>${q.r}</p></details>`).join("")}</div>
+    </div>
+  </section>
+
+  <section id="condiciones" class="fina">
+    <div class="contenedor">
+      <div class="cabeza aparece"><h2 class="mayus">Condiciones del servicio</h2></div>
+      <div class="acordeon">${N.condiciones.map(c=>`<details><summary>${c.t}</summary><ul>${c.items.map(i=>`<li>${i}</li>`).join("")}</ul></details>`).join("")}</div>
+    </div>
+  </section>`;
+}
+
+menu.push(["#contacto","Contacto"]);
+html += `
+<section class="contacto" id="contacto">
+  <div class="contenedor">
+    <span class="pastilla">${N.activa ? "navidad en casa" : "hablemos"}</span>
+    <h2 class="mayus">${N.activa ? N.cierre.titulo : "Agenda tu sesión"}</h2>
+    <p>${N.activa ? N.cierre.texto : "Escríbeme por WhatsApp y te envío la disponibilidad."}</p>
+    <a class="boton" href="${wa()}" target="_blank" rel="noopener">${N.activa ? N.cierre.boton : "Escribir por WhatsApp"}</a>
+    <div class="pagos">${C.pagos}</div>
+  </div>
+</section>
+
+<footer><div class="contenedor">
+  <span>© ${new Date().getFullYear()} AMCA Studio · ${C.ciudad}, Colombia</span>
+  <span>${C.sitioMarcas?`<a href="${C.sitioMarcas}">Fotografía para marcas</a>`:""}${C.instagram?`<a href="${C.instagram}" target="_blank" rel="noopener">Instagram</a>`:""}${C.tiktok?`<a href="${C.tiktok}" target="_blank" rel="noopener">TikTok</a>`:""}${C.behance?`<a href="${C.behance}" target="_blank" rel="noopener">Behance</a>`:""}</span>
+</div></footer>`;
+
+document.getElementById("app").innerHTML = html;
+document.getElementById("menu").innerHTML = menu.map(([h,t])=>`<li><a href="${h}">${t}</a></li>`).join("");
+document.getElementById("waFlotante").href = wa();
+
+/* Visor de fotos: sesiones de portada (varias fotos) y galería */
+const visor=document.getElementById("visor"), vImg=visor.querySelector(".escena img"),
+  vNom=visor.querySelector(".nom"), vCont=visor.querySelector(".contador"), vPie=visor.querySelector(".pie"), vMinis=visor.querySelector(".minis");
+let lista=[], idx=0, esSesion=false;
+function mostrar(i){
+  idx=(i+lista.length)%lista.length;
+  vImg.src=lista[idx].foto; vImg.alt=lista[idx].pie;
+  vCont.textContent=lista.length>1?`${idx+1} / ${lista.length}`:"";
+  vPie.textContent=esSesion?"":lista[idx].pie;
+  vMinis.querySelectorAll("button").forEach((b,j)=>b.classList.toggle("actual",j===idx));
+  const m=vMinis.children[idx]; if(m) m.scrollIntoView({block:"nearest",inline:"center"});
+}
+function abrir(nuevaLista,i,titulo,sesion){
+  lista=nuevaLista; esSesion=!!sesion;
+  vNom.textContent=titulo||"";
+  visor.classList.toggle("varias",lista.length>1);
+  vMinis.innerHTML=esSesion?lista.map((f,j)=>`<button aria-label="Foto ${j+1}"><img src="${f.foto}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></button>`).join(""):"";
+  vMinis.querySelectorAll("button").forEach((b,j)=>b.onclick=()=>mostrar(j));
+  visor.classList.add("abierto"); document.body.style.overflow="hidden";
+  mostrar(i); visor.querySelector(".cerrar").focus();
+}
+const cerrar=()=>{visor.classList.remove("abierto");document.body.style.overflow=""};
+document.querySelectorAll(".sesion").forEach(b=>b.onclick=()=>{
+  if(b.querySelector(".vacia"))return;
+  const s=N.sesionesPortada[+b.dataset.s]; abrir(fotosDe(s),0,s.nombre,true);
+});
+document.querySelector(".galeria").addEventListener("click",e=>{
+  const it=e.target.closest(".item"); if(!it||it.querySelector(".vacia"))return;
+  abrir(C.galeria,+it.dataset.i,C.retratos.titulo,false);
+});
+visor.querySelector(".cerrar").onclick=cerrar;
+visor.querySelector(".ant").onclick=()=>mostrar(idx-1);
+visor.querySelector(".sig").onclick=()=>mostrar(idx+1);
+visor.querySelector(".escena").addEventListener("click",e=>{if(e.target.classList.contains("escena"))cerrar()});
+document.addEventListener("keydown",e=>{if(!visor.classList.contains("abierto"))return;
+  if(e.key==="Escape")cerrar(); if(e.key==="ArrowLeft")mostrar(idx-1); if(e.key==="ArrowRight")mostrar(idx+1);});
+/* Deslizar con el dedo en el celular */
+let x0=null;
+visor.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
+visor.addEventListener("touchend",e=>{if(x0===null||lista.length<2)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)mostrar(idx+(dx<0?1:-1));x0=null},{passive:true});
+
+/* Línea bajo el menú al bajar + aparición suave */
+const nav=document.getElementById("nav");
+const arriba=document.getElementById("arriba");
+addEventListener("scroll",()=>{nav.classList.toggle("con-linea",scrollY>20);arriba.classList.toggle("visible",scrollY>innerHeight*.8)},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visto");io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".aparece").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
